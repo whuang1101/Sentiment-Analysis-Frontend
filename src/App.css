@@ -1,11 +1,57 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-image: url("../src/giant-snoo-reddit-robot-fanart-6i1uql3votwtmyf4.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-attachment: fixed;
+  padding: 1em;
+
+}
+*{
+  padding:0px;
+  margin: 0px;
+
 }
 .border{
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   
+}
+.middle-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.three-columns{
+  display: flex;
+  gap: 2em;
+}
+.three-comments {
+  border: 1px solid white;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: black;
+}
+
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+.comment{
+  
+  word-wrap: break-word;
+  border: .5px solid white;
+  padding: 1em;
+
 }
