@@ -19,8 +19,8 @@ export function Pie({data = data}) {
         chartType="PieChart"
         data={data}
         options={options}
-        width={"70%"}
-        height={"400px"}
+        width={"100%"}
+
       />
     );
   }

@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 import { motion } from 'framer-motion';
 
 function App() {
-  const [data, setData] = useState("hey");
+  const [data, setData] = useState("");
   const [newData, setNewData] = useState("no");
   const [loading, setLoading] = useState(true);
   const [newLoading, setNewLoading] = useState(false);
@@ -74,8 +74,8 @@ function App() {
             Click here to try!
           </motion.div>
 
-          <label htmlFor="">Please enter a reddit post url! Format: https://www.reddit.com/r/[subreddit]/comments/[some stuff]</label>
-          <input type="text" value={data} onChange={(e) => setData(e.target.value)} />
+          <label htmlFor="" className='smaller'>Please enter a reddit post url!</label>
+          <input type="text" value={data} onChange={(e) => setData(e.target.value)} placeholder=' Format: https://www.reddit.com/r/[subreddit]/comments/[some stuff]'/>
           <button onClick={() => sendData(data)}>Send data</button>
           {newLoading &&    
           <div className='loading'>
@@ -90,8 +90,10 @@ function App() {
         {!loading && 
           <>
             <h2>Currently looking at the sentiments of comments from "{newData.title}"</h2>
-            <p>For more details go to <a href={currentURL} style={{color:"yellow"}}> {currentURL}</a></p>
-            <Pie data={pieData} />
+            <p className='smaller'>For more details go to <a href={currentURL} style={{color:"yellow"}} className='smaller'> here!</a></p>
+            <div className='pie'>
+              <Pie data={pieData} />
+            </div>
 
             <div className="three-columns">
               {[1, 2, 3].map((index) => (
